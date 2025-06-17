@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Russian A1 Exercises: Basic Vocabulary for Everyday Use</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h2 {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        .exercise {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .exercise-number {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .correct {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .navigation select {
+            padding: 5px;
+        }
+        
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .navigation {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>100 Russian A1 Exercises: Basic Vocabulary for Everyday Use</h1>
+    
+    <div class="navigation">
+        <label for="section-select">Jump to section:</label>
+        <select id="section-select" onchange="jumpToSection(this.value)">
+            <option value="">Select a section</option>
+            <option value="greetings">Greetings and Basic Phrases</option>
+            <option value="numbers">Numbers and Counting</option>
+            <option value="family">Family Members</option>
+            <option value="food">Food and Drinks</option>
+            <option value="colors">Colors and Descriptions</option>
+            <option value="days">Days, Months, Seasons</option>
+            <option value="objects">Common Objects</option>
+            <option value="places">Places and Directions</option>
+            <option value="activities">Activities and Hobbies</option>
+            <option value="personal">Personal Information</option>
+        </select>
+    </div>
+    
+    <button onclick="scrollToTop()" class="top-button">↑</button>
+    
+    <h2 id="greetings">Greetings and Basic Phrases</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 1 (Multiple Choice)</span></p>
+        <p>Choose the correct translation for "Hello":</p>
+        <p>A) Пока<br>B) Привет<br>C) Спасибо<br>D) Извините</p>
+        <button onclick="toggleAnswer('answer1')">Show Answer</button>
+        <div id="answer1" class="answer">
+            <p><span class="correct">Answer: B) Привет</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 2 (Multiple Choice)</span></p>
+        <p>Choose the correct translation for "Thank you":</p>
+        <p>A) Пожалуйста<br>B) Извините<br>C) Спасибо<br>D) Здравствуйте</p>
+        <button onclick="toggleAnswer('answer2')">Show Answer</button>
+        <div id="answer2" class="answer">
+            <p><span class="correct">Answer: C) Спасибо</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 3 (Fill-in-the-blank)</span></p>
+        <p>Complete the greeting: "Доброе ___________" (Good morning)</p>
+        <button onclick="toggleAnswer('answer3')">Show Answer</button>
+        <div id="answer3" class="answer">
+            <p><span class="correct">Answer: утро</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 4 (Translation)</span></p>
+        <p>Translate to Russian: "Goodbye"</p>
+        <button onclick="toggleAnswer('answer4')">Show Answer</button>
+        <div id="answer4" class="answer">
+            <p><span class="correct">Answer: До свидания / Пока</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 5 (True/False)</span></p>
+        <p>"Здравствуйте" is a formal way to say hello.</p>
+        <button onclick="toggleAnswer('answer5')">Show Answer</button>
+        <div id="answer5" class="answer">
+            <p><span class="correct">Answer: True</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 6 (Multiple Choice)</span></p>
+        <p>How do you ask "How are you?" in Russian?</p>
+        <p>A) Как тебя зовут?<br>B) Как дела?<br>C) Сколько тебе лет?<br>D) Где ты живёшь?</p>
+        <button onclick="toggleAnswer('answer6')">Show Answer</button>
+        <div id="answer6" class="answer">
+            <p><span class="correct">Answer: B) Как дела?</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 7 (Fill-in-the-blank)</span></p>
+        <p>Complete the phrase: "__________ познакомиться" (Nice to meet you)</p>
+        <button onclick="toggleAnswer('answer7')">Show Answer</button>
+        <div id="answer7" class="answer">
+            <p><span class="correct">Answer: Приятно</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 8 (Translation)</span></p>
+        <p>Translate to English: "Извините"</p>
+        <button onclick="toggleAnswer('answer8')">Show Answer</button>
+        <div id="answer8" class="answer">
+            <p><span class="correct">Answer: Excuse me / Sorry</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 9 (Matching)</span></p>
+        <p>Match the Russian phrase to its English equivalent:</p>
+        <p>1. Доброй ночи<br>2. Пожалуйста<br>3. Да<br>4. Нет</p>
+        <p>a. No<br>b. Please/You're welcome<br>c. Good night<br>d. Yes</p>
+        <button onclick="toggleAnswer('answer9')">Show Answer</button>
+        <div id="answer9" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-b, 3-d, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 10 (Word Order)</span></p>
+        <p>Arrange the words to form a correct greeting:<br>вас / видеть / рад / Я</p>
+        <button onclick="toggleAnswer('answer10')">Show Answer</button>
+        <div id="answer10" class="answer">
+            <p><span class="correct">Answer: Я рад видеть вас</span></p>
+        </div>
+    </div>
+    
+    <h2 id="numbers">Numbers and Counting</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 11 (Multiple Choice)</span></p>
+        <p>What is "five" in Russian?</p>
+        <p>A) Три<br>B) Четыре<br>C) Пять<br>D) Шесть</p>
+        <button onclick="toggleAnswer('answer11')">Show Answer</button>
+        <div id="answer11" class="answer">
+            <p><span class="correct">Answer: C) Пять</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 12 (Fill-in-the-blank)</span></p>
+        <p>Complete the sequence: один, два, три, __________, пять</p>
+        <button onclick="toggleAnswer('answer12')">Show Answer</button>
+        <div id="answer12" class="answer">
+            <p><span class="correct">Answer: четыре</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 13 (Translation)</span></p>
+        <p>Translate to Russian: "seven"</p>
+        <button onclick="toggleAnswer('answer13')">Show Answer</button>
+        <div id="answer13" class="answer">
+            <p><span class="correct">Answer: семь</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 14 (Matching)</span></p>
+        <p>Match the numbers with their Russian words:</p>
+        <p>1. 10<br>2. 15<br>3. 20<br>4. 12</p>
+        <p>a. двенадцать<br>b. пятнадцать<br>c. десять<br>d. двадцать</p>
+        <button onclick="toggleAnswer('answer14')">Show Answer</button>
+        <div id="answer14" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-b, 3-d, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 15 (Multiple Choice)</span></p>
+        <p>What is "восемнадцать" in English?</p>
+        <p>A) 8<br>B) 18<br>C) 80<br>D) 800</p>
+        <button onclick="toggleAnswer('answer15')">Show Answer</button>
+        <div id="answer15" class="answer">
+            <p><span class="correct">Answer: B) 18</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 16 (Fill-in-the-blank)</span></p>
+        <p>Write the number: девят_______</p>
+        <button onclick="toggleAnswer('answer16')">Show Answer</button>
+        <div id="answer16" class="answer">
+            <p><span class="correct">Answer: девятнадцать (nineteen)</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 17 (True/False)</span></p>
+        <p>"Одиннадцать" means "eleven" in Russian.</p>
+        <button onclick="toggleAnswer('answer17')">Show Answer</button>
+        <div id="answer17" class="answer">
+            <p><span class="correct">Answer: True</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 18 (Word Order)</span></p>
+        <p>Arrange the numbers in ascending order:<br>семь / два / девять / четыре</p>
+        <button onclick="toggleAnswer('answer18')">Show Answer</button>
+        <div id="answer18" class="answer">
+            <p><span class="correct">Answer: два, четыре, семь, девять</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 19 (Multiple Choice)</span></p>
+        <p>What is the correct way to say "13" in Russian?</p>
+        <p>A) Тринадцать<br>B) Третьнадцать<br>C) Тридцать<br>D) Три</p>
+        <button onclick="toggleAnswer('answer19')">Show Answer</button>
+        <div id="answer19" class="answer">
+            <p><span class="correct">Answer: A) Тринадцать</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 20 (Translation)</span></p>
+        <p>Translate to English: "двадцать"</p>
+        <button onclick="toggleAnswer('answer20')">Show Answer</button>
+        <div id="answer20" class="answer">
+            <p><span class="correct">Answer: twenty</span></p>
+        </div>
+    </div>
+    
+    <h2 id="family">Family Members</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 21 (Multiple Choice)</span></p>
+        <p>What is "mother" in Russian?</p>
+        <p>A) Отец<br>B) Мать<br>C) Брат<br>D) Сестра</p>
+        <button onclick="toggleAnswer('answer21')">Show Answer</button>
+        <div id="answer21" class="answer">
+            <p><span class="correct">Answer: B) Мать</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 22 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Мой __________ работает в офисе." (My father works in an office)</p>
+        <button onclick="toggleAnswer('answer22')">Show Answer</button>
+        <div id="answer22" class="answer">
+            <p><span class="correct">Answer: отец</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 23 (Translation)</span></p>
+        <p>Translate to Russian: "sister"</p>
+        <button onclick="toggleAnswer('answer23')">Show Answer</button>
+        <div id="answer23" class="answer">
+            <p><span class="correct">Answer: сестра</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 24 (Matching)</span></p>
+        <p>Match the family members:</p>
+        <p>1. дедушка<br>2. бабушка<br>3. дядя<br>4. тётя</p>
+        <p>a. aunt<br>b. uncle<br>c. grandmother<br>d. grandfather</p>
+        <button onclick="toggleAnswer('answer24')">Show Answer</button>
+        <div id="answer24" class="answer">
+            <p><span class="correct">Answer: 1-d, 2-c, 3-b, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 25 (Multiple Choice)</span></p>
+        <p>What is "сын" in English?</p>
+        <p>A) Daughter<br>B) Son<br>C) Brother<br>D) Father</p>
+        <button onclick="toggleAnswer('answer25')">Show Answer</button>
+        <div id="answer25" class="answer">
+            <p><span class="correct">Answer: B) Son</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 26 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "У меня есть старшая __________." (I have an older sister)</p>
+        <button onclick="toggleAnswer('answer26')">Show Answer</button>
+        <div id="answer26" class="answer">
+            <p><span class="correct">Answer: сестра</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 27 (True/False)</span></p>
+        <p>"Муж" means "wife" in Russian.</p>
+        <button onclick="toggleAnswer('answer27')">Show Answer</button>
+        <div id="answer27" class="answer">
+            <p><span class="correct">Answer: False (it means "husband")</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 28 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>большая / У / семья / меня</p>
+        <button onclick="toggleAnswer('answer28')">Show Answer</button>
+        <div id="answer28" class="answer">
+            <p><span class="correct">Answer: У меня большая семья</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 29 (Multiple Choice)</span></p>
+        <p>What is "родители" in English?</p>
+        <p>A) Relatives<br>B) Parents<br>C) Children<br>D) Grandparents</p>
+        <button onclick="toggleAnswer('answer29')">Show Answer</button>
+        <div id="answer29" class="answer">
+            <p><span class="correct">Answer: B) Parents</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 30 (Translation)</span></p>
+        <p>Translate to Russian: "child"</p>
+        <button onclick="toggleAnswer('answer30')">Show Answer</button>
+        <div id="answer30" class="answer">
+            <p><span class="correct">Answer: ребёнок</span></p>
+        </div>
+    </div>
+    
+    <h2 id="food">Food and Drinks</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 31 (Multiple Choice)</span></p>
+        <p>What is "хлеб" in English?</p>
+        <p>A) Milk<br>B) Water<br>C) Bread<br>D) Meat</p>
+        <button onclick="toggleAnswer('answer31')">Show Answer</button>
+        <div id="answer31" class="answer">
+            <p><span class="correct">Answer: C) Bread</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 32 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Я хочу __________ кофе." (I want coffee)</p>
+        <button onclick="toggleAnswer('answer32')">Show Answer</button>
+        <div id="answer32" class="answer">
+            <p><span class="correct">Answer: выпить</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 33 (Translation)</span></p>
+        <p>Translate to Russian: "apple"</p>
+        <button onclick="toggleAnswer('answer33')">Show Answer</button>
+        <div id="answer33" class="answer">
+            <p><span class="correct">Answer: яблоко</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 34 (Matching)</span></p>
+        <p>Match the food items:</p>
+        <p>1. молоко<br>2. мясо<br>3. рыба<br>4. сыр</p>
+        <p>a. fish<br>b. cheese<br>c. meat<br>d. milk</p>
+        <button onclick="toggleAnswer('answer34')">Show Answer</button>
+        <div id="answer34" class="answer">
+            <p><span class="correct">Answer: 1-d, 2-c, 3-a, 4-b</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 35 (Multiple Choice)</span></p>
+        <p>What is "вода" in English?</p>
+        <p>A) Wine<br>B) Vodka<br>C) Water<br>D) Juice</p>
+        <button onclick="toggleAnswer('answer35')">Show Answer</button>
+        <div id="answer35" class="answer">
+            <p><span class="correct">Answer: C) Water</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 36 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "На __________ у меня яичница." (For breakfast I have fried eggs)</p>
+        <button onclick="toggleAnswer('answer36')">Show Answer</button>
+        <div id="answer36" class="answer">
+            <p><span class="correct">Answer: завтрак</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 37 (True/False)</span></p>
+        <p>"Суп" means "soup" in Russian.</p>
+        <button onclick="toggleAnswer('answer37')">Show Answer</button>
+        <div id="answer37" class="answer">
+            <p><span class="correct">Answer: True</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 38 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>вкусный / очень / Этот / салат</p>
+        <button onclick="toggleAnswer('answer38')">Show Answer</button>
+        <div id="answer38" class="answer">
+            <p><span class="correct">Answer: Этот салат очень вкусный</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 39 (Multiple Choice)</span></p>
+        <p>What meal is "ужин"?</p>
+        <p>A) Breakfast<br>B) Lunch<br>C) Dinner<br>D) Snack</p>
+        <button onclick="toggleAnswer('answer39')">Show Answer</button>
+        <div id="answer39" class="answer">
+            <p><span class="correct">Answer: C) Dinner</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 40 (Translation)</span></p>
+        <p>Translate to Russian: "tea"</p>
+        <button onclick="toggleAnswer('answer40')">Show Answer</button>
+        <div id="answer40" class="answer">
+            <p><span class="correct">Answer: чай</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 41 (Multiple Choice)</span></p>
+        <p>What is "картошка" in English?</p>
+        <p>A) Carrot<br>B) Potato<br>C) Tomato<br>D) Cucumber</p>
+        <button onclick="toggleAnswer('answer41')">Show Answer</button>
+        <div id="answer41" class="answer">
+            <p><span class="correct">Answer: B) Potato</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 42 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Я люблю __________ с сахаром." (I like tea with sugar)</p>
+        <button onclick="toggleAnswer('answer42')">Show Answer</button>
+        <div id="answer42" class="answer">
+            <p><span class="correct">Answer: чай</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 43 (Translation)</span></p>
+        <p>Translate to English: "фрукты"</p>
+        <button onclick="toggleAnswer('answer43')">Show Answer</button>
+        <div id="answer43" class="answer">
+            <p><span class="correct">Answer: fruits</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 44 (Matching)</span></p>
+        <p>Match the drinks:</p>
+        <p>1. сок<br>2. кофе<br>3. чай<br>4. молоко</p>
+        <p>a. milk<br>b. juice<br>c. coffee<br>d. tea</p>
+        <button onclick="toggleAnswer('answer44')">Show Answer</button>
+        <div id="answer44" class="answer">
+            <p><span class="correct">Answer: 1-b, 2-c, 3-d, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 45 (Multiple Choice)</span></p>
+        <p>What is "курица" in English?</p>
+        <p>A) Turkey<br>B) Duck<br>C) Chicken<br>D) Beef</p>
+        <button onclick="toggleAnswer('answer45')">Show Answer</button>
+        <div id="answer45" class="answer">
+            <p><span class="correct">Answer: C) Chicken</span></p>
+        </div>
+    </div>
+    
+    <h2 id="colors">Colors and Descriptions</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 46 (Multiple Choice)</span></p>
+        <p>What color is "красный"?</p>
+        <p>A) Blue<br>B) Green<br>C) Red<br>D) Yellow</p>
+        <button onclick="toggleAnswer('answer46')">Show Answer</button>
+        <div id="answer46" class="answer">
+            <p><span class="correct">Answer: C) Red</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 47 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Небо __________." (The sky is blue)</p>
+        <button onclick="toggleAnswer('answer47')">Show Answer</button>
+        <div id="answer47" class="answer">
+            <p><span class="correct">Answer: голубое/синее</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 48 (Translation)</span></p>
+        <p>Translate to Russian: "green"</p>
+        <button onclick="toggleAnswer('answer48')">Show Answer</button>
+        <div id="answer48" class="answer">
+            <p><span class="correct">Answer: зелёный</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 49 (Matching)</span></p>
+        <p>Match the colors:</p>
+        <p>1. чёрный<br>2. белый<br>3. жёлтый<br>4. коричневый</p>
+        <p>a. yellow<br>b. brown<br>c. black<br>d. white</p>
+        <button onclick="toggleAnswer('answer49')">Show Answer</button>
+        <div id="answer49" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-d, 3-a, 4-b</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 50 (Multiple Choice)</span></p>
+        <p>What is "оранжевый" in English?</p>
+        <p>A) Orange<br>B) Purple<br>C) Pink<br>D) Grey</p>
+        <button onclick="toggleAnswer('answer50')">Show Answer</button>
+        <div id="answer50" class="answer">
+            <p><span class="correct">Answer: A) Orange</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 51 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Эта машина __________." (This car is grey)</p>
+        <button onclick="toggleAnswer('answer51')">Show Answer</button>
+        <div id="answer51" class="answer">
+            <p><span class="correct">Answer: серая</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 52 (True/False)</span></p>
+        <p>"Розовый" means "purple" in Russian.</p>
+        <button onclick="toggleAnswer('answer52')">Show Answer</button>
+        <div id="answer52" class="answer">
+            <p><span class="correct">Answer: False (it means "pink")</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 53 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>синий / у / свитер / меня</p>
+        <button onclick="toggleAnswer('answer53')">Show Answer</button>
+        <div id="answer53" class="answer">
+            <p><span class="correct">Answer: У меня синий свитер</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 54 (Multiple Choice)</span></p>
+        <p>What is "большой" in English?</p>
+        <p>A) Small<br>B) Big<br>C) Tall<br>D) Short</p>
+        <button onclick="toggleAnswer('answer54')">Show Answer</button>
+        <div id="answer54" class="answer">
+            <p><span class="correct">Answer: B) Big</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 55 (Translation)</span></p>
+        <p>Translate to Russian: "beautiful"</p>
+        <button onclick="toggleAnswer('answer55')">Show Answer</button>
+        <div id="answer55" class="answer">
+            <p><span class="correct">Answer: красивый/красивая</span></p>
+        </div>
+    </div>
+    
+    <h2 id="days">Days, Months, Seasons</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 56 (Multiple Choice)</span></p>
+        <p>What is "понедельник" in English?</p>
+        <p>A) Sunday<br>B) Monday<br>C) Tuesday<br>D) Wednesday</p>
+        <button onclick="toggleAnswer('answer56')">Show Answer</button>
+        <div id="answer56" class="answer">
+            <p><span class="correct">Answer: B) Monday</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 57 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "__________ - первый день недели." (Sunday is the first day of the week)</p>
+        <button onclick="toggleAnswer('answer57')">Show Answer</button>
+        <div id="answer57" class="answer">
+            <p><span class="correct">Answer: Воскресенье</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 58 (Translation)</span></p>
+        <p>Translate to Russian: "summer"</p>
+        <button onclick="toggleAnswer('answer58')">Show Answer</button>
+        <div id="answer58" class="answer">
+            <p><span class="correct">Answer: лето</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 59 (Matching)</span></p>
+        <p>Match the seasons:</p>
+        <p>1. весна<br>2. лето<br>3. осень<br>4. зима</p>
+        <p>a. winter<br>b. spring<br>c. autumn/fall<br>d. summer</p>
+        <button onclick="toggleAnswer('answer59')">Show Answer</button>
+        <div id="answer59" class="answer">
+            <p><span class="correct">Answer: 1-b, 2-d, 3-c, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 60 (Multiple Choice)</span></p>
+        <p>What is "март" in English?</p>
+        <p>A) May<br>B) March<br>C) April<br>D) June</p>
+        <button onclick="toggleAnswer('answer60')">Show Answer</button>
+        <div id="answer60" class="answer">
+            <p><span class="correct">Answer: B) March</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 61 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Сегодня __________." (Today is Friday)</p>
+        <button onclick="toggleAnswer('answer61')">Show Answer</button>
+        <div id="answer61" class="answer">
+            <p><span class="correct">Answer: пятница</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 62 (True/False)</span></p>
+        <p>"Декабрь" is the last month of the year.</p>
+        <button onclick="toggleAnswer('answer62')">Show Answer</button>
+        <div id="answer62" class="answer">
+            <p><span class="correct">Answer: True</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 63 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>холодная / очень / Зима / в России</p>
+        <button onclick="toggleAnswer('answer63')">Show Answer</button>
+        <div id="answer63" class="answer">
+            <p><span class="correct">Answer: Зима в России очень холодная</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 64 (Multiple Choice)</span></p>
+        <p>What is "неделя" in English?</p>
+        <p>A) Day<br>B) Month<br>C) Week<br>D) Year</p>
+        <button onclick="toggleAnswer('answer64')">Show Answer</button>
+        <div id="answer64" class="answer">
+            <p><span class="correct">Answer: C) Week</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 65 (Translation)</span></p>
+        <p>Translate to English: "вторник"</p>
+        <button onclick="toggleAnswer('answer65')">Show Answer</button>
+        <div id="answer65" class="answer">
+            <p><span class="correct">Answer: Tuesday</span></p>
+        </div>
+    </div>
+    
+    <h2 id="objects">Common Objects</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 66 (Multiple Choice)</span></p>
+        <p>What is "стол" in English?</p>
+        <p>A) Chair<br>B) Table<br>C) Bed<br>D) Sofa</p>
+        <button onclick="toggleAnswer('answer66')">Show Answer</button>
+        <div id="answer66" class="answer">
+            <p><span class="correct">Answer: B) Table</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 67 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Моя __________ на столе." (My book is on the table)</p>
+        <button onclick="toggleAnswer('answer67')">Show Answer</button>
+        <div id="answer67" class="answer">
+            <p><span class="correct">Answer: книга</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 68 (Translation)</span></p>
+        <p>Translate to Russian: "window"</p>
+        <button onclick="toggleAnswer('answer68')">Show Answer</button>
+        <div id="answer68" class="answer">
+            <p><span class="correct">Answer: окно</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 69 (Matching)</span></p>
+        <p>Match the objects:</p>
+        <p>1. дверь<br>2. стул<br>3. кровать<br>4. лампа</p>
+        <p>a. lamp<br>b. door<br>c. chair<br>d. bed</p>
+        <button onclick="toggleAnswer('answer69')">Show Answer</button>
+        <div id="answer69" class="answer">
+            <p><span class="correct">Answer: 1-b, 2-c, 3-d, 4-a</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 70 (Multiple Choice)</span></p>
+        <p>What is "телефон" in English?</p>
+        <p>A) Television<br>B) Computer<br>C) Phone<br>D) Radio</p>
+        <button onclick="toggleAnswer('answer70')">Show Answer</button>
+        <div id="answer70" class="answer">
+            <p><span class="correct">Answer: C) Phone</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 71 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Мой __________ новый." (My computer is new)</p>
+        <button onclick="toggleAnswer('answer71')">Show Answer</button>
+        <div id="answer71" class="answer">
+            <p><span class="correct">Answer: компьютер</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 72 (True/False)</span></p>
+        <p>"Часы" means "hour" in Russian.</p>
+        <button onclick="toggleAnswer('answer72')">Show Answer</button>
+        <div id="answer72" class="answer">
+            <p><span class="correct">Answer: False (it means "clock" or "watch")</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 73 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>на / ключи / столе / Мои</p>
+        <button onclick="toggleAnswer('answer73')">Show Answer</button>
+        <div id="answer73" class="answer">
+            <p><span class="correct">Answer: Мои ключи на столе</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 74 (Multiple Choice)</span></p>
+        <p>What is "сумка" in English?</p>
+        <p>A) Wallet<br>B) Bag<br>C) Purse<br>D) Backpack</p>
+        <button onclick="toggleAnswer('answer74')">Show Answer</button>
+        <div id="answer74" class="answer">
+            <p><span class="correct">Answer: B) Bag</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 75 (Translation)</span></p>
+        <p>Translate to Russian: "pen"</p>
+        <button onclick="toggleAnswer('answer75')">Show Answer</button>
+        <div id="answer75" class="answer">
+            <p><span class="correct">Answer: ручка</span></p>
+        </div>
+    </div>
+    
+    <h2 id="places">Places and Directions</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 76 (Multiple Choice)</span></p>
+        <p>What is "магазин" in English?</p>
+        <p>A) Market<br>B) Shop/Store<br>C) Mall<br>D) Restaurant</p>
+        <button onclick="toggleAnswer('answer76')">Show Answer</button>
+        <div id="answer76" class="answer">
+            <p><span class="correct">Answer: B) Shop/Store</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 77 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Банк находится __________ от почты." (The bank is to the right of the post office)</p>
+        <button onclick="toggleAnswer('answer77')">Show Answer</button>
+        <div id="answer77" class="answer">
+            <p><span class="correct">Answer: справа</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 78 (Translation)</span></p>
+        <p>Translate to Russian: "hospital"</p>
+        <button onclick="toggleAnswer('answer78')">Show Answer</button>
+        <div id="answer78" class="answer">
+            <p><span class="correct">Answer: больница</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 79 (Matching)</span></p>
+        <p>Match the places:</p>
+        <p>1. школа<br>2. парк<br>3. аптека<br>4. ресторан</p>
+        <p>a. pharmacy<br>b. restaurant<br>c. school<br>d. park</p>
+        <button onclick="toggleAnswer('answer79')">Show Answer</button>
+        <div id="answer79" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-d, 3-a, 4-b</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 80 (Multiple Choice)</span></p>
+        <p>What is "библиотека" in English?</p>
+        <p>A) Bookstore<br>B) Library<br>C) Museum<br>D) Theater</p>
+        <button onclick="toggleAnswer('answer80')">Show Answer</button>
+        <div id="answer80" class="answer">
+            <p><span class="correct">Answer: B) Library</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 81 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Я иду в __________." (I am going to the cinema)</p>
+        <button onclick="toggleAnswer('answer81')">Show Answer</button>
+        <div id="answer81" class="answer">
+            <p><span class="correct">Answer: кино/кинотеатр</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 82 (True/False)</span></p>
+        <p>"Налево" means "to the right" in Russian.</p>
+        <button onclick="toggleAnswer('answer82')">Show Answer</button>
+        <div id="answer82" class="answer">
+            <p><span class="correct">Answer: False (it means "to the left")</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 83 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>находится / Где / вокзал / ?</p>
+        <button onclick="toggleAnswer('answer83')">Show Answer</button>
+        <div id="answer83" class="answer">
+            <p><span class="correct">Answer: Где находится вокзал?</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 84 (Multiple Choice)</span></p>
+        <p>What is "улица" in English?</p>
+        <p>A) House<br>B) Building<br>C) Street<br>D) Road</p>
+        <button onclick="toggleAnswer('answer84')">Show Answer</button>
+        <div id="answer84" class="answer">
+            <p><span class="correct">Answer: C) Street</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 85 (Translation)</span></p>
+        <p>Translate to English: "метро"</p>
+        <button onclick="toggleAnswer('answer85')">Show Answer</button>
+        <div id="answer85" class="answer">
+            <p><span class="correct">Answer: metro/subway</span></p>
+        </div>
+    </div>
+    
+    <h2 id="activities">Activities and Hobbies</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 86 (Multiple Choice)</span></p>
+        <p>What is "читать" in English?</p>
+        <p>A) To write<br>B) To read<br>C) To speak<br>D) To listen</p>
+        <button onclick="toggleAnswer('answer86')">Show Answer</button>
+        <div id="answer86" class="answer">
+            <p><span class="correct">Answer: B) To read</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 87 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Я люблю __________ музыку." (I like to listen to music)</p>
+        <button onclick="toggleAnswer('answer87')">Show Answer</button>
+        <div id="answer87" class="answer">
+            <p><span class="correct">Answer: слушать</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 88 (Translation)</span></p>
+        <p>Translate to Russian: "to swim"</p>
+        <button onclick="toggleAnswer('answer88')">Show Answer</button>
+        <div id="answer88" class="answer">
+            <p><span class="correct">Answer: плавать</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 89 (Matching)</span></p>
+        <p>Match the activities:</p>
+        <p>1. играть<br>2. готовить<br>3. танцевать<br>4. петь</p>
+        <p>a. to cook<br>b. to sing<br>c. to play<br>d. to dance</p>
+        <button onclick="toggleAnswer('answer89')">Show Answer</button>
+        <div id="answer89" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-a, 3-d, 4-b</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 90 (Multiple Choice)</span></p>
+        <p>What is "спорт" in English?</p>
+        <p>A) Game<br>B) Sport<br>C) Play<br>D) Exercise</p>
+        <button onclick="toggleAnswer('answer90')">Show Answer</button>
+        <div id="answer90" class="answer">
+            <p><span class="correct">Answer: B) Sport</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 91 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Я __________ в футбол по выходным." (I play football on weekends)</p>
+        <button onclick="toggleAnswer('answer91')">Show Answer</button>
+        <div id="answer91" class="answer">
+            <p><span class="correct">Answer: играю</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 92 (True/False)</span></p>
+        <p>"Смотреть телевизор" means "to watch television" in Russian.</p>
+        <button onclick="toggleAnswer('answer92')">Show Answer</button>
+        <div id="answer92" class="answer">
+            <p><span class="correct">Answer: True</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 93 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>кино / в / ходить / Я / люблю</p>
+        <button onclick="toggleAnswer('answer93')">Show Answer</button>
+        <div id="answer93" class="answer">
+            <p><span class="correct">Answer: Я люблю ходить в кино</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 94 (Multiple Choice)</span></p>
+        <p>What is "рисовать" in English?</p>
+        <p>A) To paint/draw<br>B) To write<br>C) To color<br>D) To sketch</p>
+        <button onclick="toggleAnswer('answer94')">Show Answer</button>
+        <div id="answer94" class="answer">
+            <p><span class="correct">Answer: A) To paint/draw</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 95 (Translation)</span></p>
+        <p>Translate to English: "фотографировать"</p>
+        <button onclick="toggleAnswer('answer95')">Show Answer</button>
+        <div id="answer95" class="answer">
+            <p><span class="correct">Answer: to take photos/to photograph</span></p>
+        </div>
+    </div>
+    
+    <h2 id="personal">Personal Information</h2>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 96 (Multiple Choice)</span></p>
+        <p>How do you ask "What is your name?" in Russian?</p>
+        <p>A) Как дела?<br>B) Как тебя зовут?<br>C) Сколько тебе лет?<br>D) Где ты живёшь?</p>
+        <button onclick="toggleAnswer('answer96')">Show Answer</button>
+        <div id="answer96" class="answer">
+            <p><span class="correct">Answer: B) Как тебя зовут?</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 97 (Fill-in-the-blank)</span></p>
+        <p>Complete the sentence: "Мне __________ лет." (I am ___ years old)</p>
+        <button onclick="toggleAnswer('answer97')">Show Answer</button>
+        <div id="answer97" class="answer">
+            <p><span class="correct">Answer: [any number]</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 98 (Translation)</span></p>
+        <p>Translate to Russian: "I live in Moscow"</p>
+        <button onclick="toggleAnswer('answer98')">Show Answer</button>
+        <div id="answer98" class="answer">
+            <p><span class="correct">Answer: Я живу в Москве</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 99 (Matching)</span></p>
+        <p>Match the questions with appropriate responses:</p>
+        <p>1. Как тебя зовут?<br>2. Откуда ты?<br>3. Сколько тебе лет?<br>4. Где ты живёшь?</p>
+        <p>a. Мне 25 лет.<br>b. Я из России.<br>c. Меня зовут Иван.<br>d. Я живу в Москве.</p>
+        <button onclick="toggleAnswer('answer99')">Show Answer</button>
+        <div id="answer99" class="answer">
+            <p><span class="correct">Answer: 1-c, 2-b, 3-a, 4-d</span></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p><span class="exercise-number">Exercise 100 (Word Order)</span></p>
+        <p>Arrange the words to form a correct sentence:<br>студент / Я / университета / этого</p>
+        <button onclick="toggleAnswer('answer100')">Show Answer</button>
+        <div id="answer100" class="answer">
+            <p><span class="correct">Answer: Я студент этого университета</span></p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+        
+        function jumpToSection(sectionId) {
+            if (sectionId) {
+                document.getElementById(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
