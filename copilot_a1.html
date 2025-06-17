@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Russian Language Exercises: Basic Vocabulary for Everyday Use (A1 Level)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 20px;
+      line-height: 1.5;
+    }
+    h1 {
+      color: #003366;
+      text-align: center;
+      background-color: #cce7ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .exercise {
+      background-color: #ffffff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    .exercise p {
+      margin: 0 0 10px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      width: 220px;
+      margin-right: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      margin: 5px 5px 5px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .options button {
+      background-color: #007acc;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .options button:hover {
+      background-color: #005f99;
+    }
+  </style>
+  <script>
+    // Function to check the user answer against the correct one.
+    function checkAnswer(inputId, correctAnswer, feedbackId) {
+      let userAnswer = document.getElementById(inputId).value.toLowerCase().trim();
+      let feedback = document.getElementById(feedbackId);
+      if(userAnswer === correctAnswer) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Try Again!";
+        feedback.style.color = "red";
+      }
+    }
+    // Function to reveal the correct answer (or say “Correct!” if the input is already right).
+    function revealAnswer(inputId, correctAnswer, feedbackId) {
+      let userAnswer = document.getElementById(inputId).value.toLowerCase().trim();
+      let feedback = document.getElementById(feedbackId);
+      if(userAnswer === correctAnswer) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "The correct answer is: " + correctAnswer;
+        feedback.style.color = "blue";
+      }
+    }
+    // Once the page loads, iterate over our exercises data and create the HTML.
+    document.addEventListener("DOMContentLoaded", function() {
+      const exercises = [
+        { number: 1, type: "mc", question: "Translate ‘Hello’ into Russian.", correct: "привет", options: ["привет", "до свидания", "спасибо", "пожалуйста"] },
+        { number: 2, type: "mc", question: "Translate ‘Goodbye’ into Russian.", correct: "до свидания", options: ["привет", "до свидания", "да", "нет"] },
+        { number: 3, type: "mc", question: "Translate ‘Please’ into Russian.", correct: "пожалуйста", options: ["спасибо", "пожалуйста", "извините", "здрасте"] },
+        { number: 4, type: "mc", question: "Translate ‘Thank you’ into Russian.", correct: "спасибо", options: ["спасибо", "пожалуйста", "привет", "до свидания"] },
+        { number: 5, type: "ft", question: "Write the Russian word for ‘Yes’.", correct: "да" },
+        { number: 6, type: "mc", question: "Translate ‘No’ into Russian.", correct: "нет", options: ["нет", "да", "может быть", "пожалуйста"] },
+        { number: 7, type: "mc", question: "Translate ‘Water’ into Russian.", correct: "вода", options: ["вода", "чай", "сок", "кофе"] },
+        { number: 8, type: "mc", question: "Translate ‘Coffee’ into Russian.", correct: "кофе", options: ["кофе", "чай", "вода", "сок"] },
+        { number: 9, type: "mc", question: "Translate ‘Bread’ into Russian.", correct: "хлеб", options: ["хлеб", "молоко", "сыр", "рис"] },
+        { number: 10, type: "ft", question: "Write the Russian word for ‘Milk’.", correct: "молоко" },
+        { number: 11, type: "mc", question: "Translate ‘Tea’ into Russian.", correct: "чай", options: ["чай", "кофе", "водка", "воды"] },
+        { number: 12, type: "mc", question: "Translate ‘Sugar’ into Russian.", correct: "сахар", options: ["сахар", "соль", "масло", "мёд"] },
+        { number: 13, type: "mc", question: "Translate ‘Salt’ into Russian.", correct: "соль", options: ["соль", "сахар", "вода", "специи"] },
+        { number: 14, type: "mc", question: "Translate ‘Butter’ into Russian.", correct: "масло", options: ["масло", "сыр", "кефир", "сливки"] },
+        { number: 15, type: "ft", question: "Write the Russian word for ‘Cheese’.", correct: "сыр" },
+        { number: 16, type: "mc", question: "Translate ‘Apple’ into Russian.", correct: "яблоко", options: ["яблоко", "банан", "груша", "апельсин"] },
+        { number: 17, type: "mc", question: "Translate ‘Banana’ into Russian.", correct: "банан", options: ["банан", "яблоко", "киви", "арбуз"] },
+        { number: 18, type: "mc", question: "Translate ‘Orange’ into Russian.", correct: "апельсин", options: ["апельсин", "лимон", "банан", "манго"] },
+        { number: 19, type: "mc", question: "Translate ‘Grape’ into Russian.", correct: "виноград", options: ["виноград", "яблоко", "слива", "груша"] },
+        { number: 20, type: "ft", question: "Write the Russian word for ‘Watermelon’.", correct: "арбуз" },
+        { number: 21, type: "mc", question: "Translate ‘Car’ into Russian.", correct: "машина", options: ["машина", "велосипед", "автобус", "поезд"] },
+        { number: 22, type: "mc", question: "Translate ‘Bus’ into Russian.", correct: "автобус", options: ["автобус", "машина", "самолёт", "трамвай"] },
+        { number: 23, type: "mc", question: "Translate ‘Train’ into Russian.", correct: "поезд", options: ["поезд", "автобус", "такси", "метро"] },
+        { number: 24, type: "mc", question: "Translate ‘Bicycle’ into Russian.", correct: "велосипед", options: ["велосипед", "машина", "велорикша", "самокат"] },
+        { number: 25, type: "ft", question: "Write the Russian word for ‘Airplane’.", correct: "самолёт" },
+        { number: 26, type: "mc", question: "Translate ‘House’ into Russian.", correct: "дом", options: ["дом", "квартира", "офис", "школа"] },
+        { number: 27, type: "mc", question: "Translate ‘Apartment’ into Russian.", correct: "квартира", options: ["квартира", "дом", "пентхаус", "бунгало"] },
+        { number: 28, type: "mc", question: "Translate ‘School’ into Russian.", correct: "школа", options: ["школа", "университет", "библиотека", "офис"] },
+        { number: 29, type: "mc", question: "Translate ‘Office’ into Russian.", correct: "офис", options: ["офис", "школа", "магазин", "кафе"] },
+        { number: 30, type: "ft", question: "Write the Russian word for ‘Store’.", correct: "магазин" },
+        { number: 31, type: "mc", question: "Translate ‘Street’ into Russian.", correct: "улица", options: ["улица", "дорога", "проезд", "переулок"] },
+        { number: 32, type: "mc", question: "Translate ‘City’ into Russian.", correct: "город", options: ["город", "деревня", "посёлок", "село"] },
+        { number: 33, type: "mc", question: "Translate ‘Town’ into Russian.", correct: "посёлок", options: ["посёлок", "город", "село", "деревня"] },
+        { number: 34, type: "mc", question: "Translate ‘Park’ into Russian.", correct: "парк", options: ["парк", "сад", "сквер", "бульвар"] },
+        { number: 35, type: "ft", question: "Write the Russian word for ‘River’.", correct: "река" },
+        { number: 36, type: "mc", question: "Translate ‘Dog’ into Russian.", correct: "собака", options: ["собака", "кошка", "птица", "рыба"] },
+        { number: 37, type: "mc", question: "Translate ‘Cat’ into Russian.", correct: "кот", options: ["кот", "собака", "мышь", "петух"] },
+        { number: 38, type: "mc", question: "Translate ‘Bird’ into Russian.", correct: "птица", options: ["птица", "рыба", "кот", "собака"] },
+        { number: 39, type: "mc", question: "Translate ‘Fish’ into Russian.", correct: "рыба", options: ["рыба", "птица", "кошка", "слон"] },
+        { number: 40, type: "ft", question: "Write the Russian word for ‘Horse’.", correct: "лошадь" },
+        { number: 41, type: "mc", question: "Translate ‘Man’ into Russian.", correct: "мужчина", options: ["мужчина", "женщина", "ребёнок", "друг"] },
+        { number: 42, type: "mc", question: "Translate ‘Woman’ into Russian.", correct: "женщина", options: ["женщина", "мужчина", "девочка", "дядя"] },
+        { number: 43, type: "mc", question: "Translate ‘Child’ into Russian.", correct: "ребёнок", options: ["ребёнок", "взрослый", "подросток", "сын"] },
+        { number: 44, type: "mc", question: "Translate ‘Friend’ into Russian.", correct: "друг", options: ["друг", "враг", "знакомый", "коллега"] },
+        { number: 45, type: "ft", question: "Write the Russian word for ‘Family’.", correct: "семья" },
+        { number: 46, type: "mc", question: "Translate ‘Name’ into Russian.", correct: "имя", options: ["имя", "слово", "дом", "город"] },
+        { number: 47, type: "mc", question: "Translate ‘Word’ into Russian.", correct: "слово", options: ["слово", "имя", "фраза", "предложение"] },
+        { number: 48, type: "mc", question: "Translate ‘Sentence’ into Russian.", correct: "предложение", options: ["предложение", "словосочетание", "абзац", "заявление"] },
+        { number: 49, type: "mc", question: "Translate ‘Language’ into Russian.", correct: "язык", options: ["язык", "слово", "либо", "перо"] },
+        { number: 50, type: "ft", question: "Write the Russian word for ‘Book’.", correct: "книга" },
+        { number: 51, type: "mc", question: "Translate ‘Pen’ into Russian.", correct: "ручка", options: ["ручка", "карандаш", "бумага", "стола"] },
+        { number: 52, type: "mc", question: "Translate ‘Pencil’ into Russian.", correct: "карандаш", options: ["карандаш", "ручка", "маркер", "фломастер"] },
+        { number: 53, type: "mc", question: "Translate ‘Paper’ into Russian.", correct: "бумага", options: ["бумага", "картон", "ткань", "дерево"] },
+        { number: 54, type: "mc", question: "Translate ‘Table’ into Russian.", correct: "стол", options: ["стол", "стул", "диван", "кровать"] },
+        { number: 55, type: "ft", question: "Write the Russian word for ‘Chair’.", correct: "стул" },
+        { number: 56, type: "mc", question: "Translate ‘Door’ into Russian.", correct: "дверь", options: ["дверь", "окно", "стена", "пол"] },
+        { number: 57, type: "mc", question: "Translate ‘Window’ into Russian.", correct: "окно", options: ["окно", "дверь", "крыша", "балкон"] },
+        { number: 58, type: "mc", question: "Translate ‘Floor’ into Russian.", correct: "пол", options: ["пол", "стена", "кровать", "потолок"] },
+        { number: 59, type: "mc", question: "Translate ‘Ceiling’ into Russian.", correct: "потолок", options: ["потолок", "пол", "стена", "окно"] },
+        { number: 60, type: "ft", question: "Write the Russian word for ‘Wall’.", correct: "стена" },
+        { number: 61, type: "mc", question: "Translate ‘Food’ into Russian.", correct: "еда", options: ["еда", "напиток", "блюдо", "снек"] },
+        { number: 62, type: "mc", question: "Translate ‘Vegetable’ into Russian.", correct: "овощ", options: ["овощ", "фрукт", "зелень", "ягода"] },
+        { number: 63, type: "mc", question: "Translate ‘Meat’ into Russian.", correct: "мясо", options: ["мясо", "рыба", "овощ", "фрукт"] },
+        { number: 64, type: "mc", question: "Translate ‘Egg’ into Russian.", correct: "яйцо", options: ["яйцо", "сливки", "сыр", "творог"] },
+        { number: 65, type: "ft", question: "Write the Russian word for ‘Soup’.", correct: "суп" },
+        { number: 66, type: "mc", question: "Translate ‘Cake’ into Russian.", correct: "торт", options: ["торт", "печенье", "пирог", "булочка"] },
+        { number: 67, type: "mc", question: "Translate ‘Cookie’ into Russian.", correct: "печенье", options: ["печенье", "торт", "кекс", "мармелад"] },
+        { number: 68, type: "mc", question: "Translate ‘Ice Cream’ into Russian.", correct: "мороженое", options: ["мороженое", "пломбир", "кефир", "йогурт"] },
+        { number: 69, type: "mc", question: "Translate ‘Juice’ into Russian.", correct: "сок", options: ["сок", "вода", "чай", "кофе"] },
+        { number: 70, type: "ft", question: "Write the Russian word for ‘Beer’.", correct: "пиво" },
+        { number: 71, type: "mc", question: "Translate ‘Morning’ into Russian.", correct: "утро", options: ["утро", "день", "вечер", "ночь"] },
+        { number: 72, type: "mc", question: "Translate ‘Afternoon’ into Russian.", correct: "день", options: ["день", "ночь", "утро", "вечер"] },
+        { number: 73, type: "mc", question: "Translate ‘Evening’ into Russian.", correct: "вечер", options: ["вечер", "ночь", "день", "утро"] },
+        { number: 74, type: "mc", question: "Translate ‘Night’ into Russian.", correct: "ночь", options: ["ночь", "день", "утро", "вечер"] },
+        { number: 75, type: "ft", question: "Write the Russian word for ‘Today’.", correct: "сегодня" },
+        { number: 76, type: "mc", question: "Translate ‘Tomorrow’ into Russian.", correct: "завтра", options: ["завтра", "вчера", "сегодня", "послезавтра"] },
+        { number: 77, type: "mc", question: "Translate ‘Yesterday’ into Russian.", correct: "вчера", options: ["вчера", "сегодня", "завтра", "ночь"] },
+        { number: 78, type: "mc", question: "Translate ‘Week’ into Russian.", correct: "неделя", options: ["неделя", "месяц", "год", "день"] },
+        { number: 79, type: "mc", question: "Translate ‘Month’ into Russian.", correct: "месяц", options: ["месяц", "неделя", "год", "день"] },
+        { number: 80, type: "ft", question: "Write the Russian word for ‘Year’.", correct: "год" },
+        { number: 81, type: "mc", question: "Translate ‘Good’ into Russian.", correct: "хороший", options: ["хороший", "плохой", "средний", "умный"] },
+        { number: 82, type: "mc", question: "Translate ‘Bad’ into Russian.", correct: "плохой", options: ["плохой", "хороший", "умный", "быстрый"] },
+        { number: 83, type: "mc", question: "Translate ‘Happy’ into Russian.", correct: "счастливый", options: ["счастливый", "грустный", "сердитый", "усталый"] },
+        { number: 84, type: "mc", question: "Translate ‘Sad’ into Russian.", correct: "грустный", options: ["грустный", "счастливый", "радостный", "улыбчивый"] },
+        { number: 85, type: "ft", question: "Write the Russian word for ‘Easy’.", correct: "легкий" },
+        { number: 86, type: "mc", question: "Translate ‘Hard’ into Russian.", correct: "тяжёлый", options: ["тяжёлый", "легкий", "быстрый", "медленный"] },
+        { number: 87, type: "mc", question: "Translate ‘Fast’ into Russian.", correct: "быстрый", options: ["быстрый", "медленный", "тяжёлый", "легкий"] },
+        { number: 88, type: "mc", question: "Translate ‘Slow’ into Russian.", correct: "медленный", options: ["медленный", "быстрый", "тяжёлый", "легкий"] },
+        { number: 89, type: "mc", question: "Translate ‘Big’ into Russian.", correct: "большой", options: ["большой", "маленький", "средний", "огромный"] },
+        { number: 90, type: "ft", question: "Write the Russian word for ‘Small’.", correct: "маленький" },
+        { number: 91, type: "mc", question: "Translate ‘Clean’ into Russian.", correct: "чистый", options: ["чистый", "грязный", "свежий", "новый"] },
+        { number: 92, type: "mc", question: "Translate ‘Dirty’ into Russian.", correct: "грязный", options: ["грязный", "чистый", "старый", "пыльный"] },
+        { number: 93, type: "mc", question: "Translate ‘Hot’ into Russian.", correct: "горячий", options: ["горячий", "холодный", "тёплый", "жаркий"] },
+        { number: 94, type: "mc", question: "Translate ‘Cold’ into Russian.", correct: "холодный", options: ["холодный", "горячий", "тёплый", "свежий"] },
+        { number: 95, type: "ft", question: "Write the Russian word for ‘Warm’.", correct: "тёплый" },
+        { number: 96, type: "mc", question: "Translate ‘Free’ (no cost) into Russian.", correct: "бесплатный", options: ["бесплатный", "дорогой", "эксклюзивный", "свободный"] },
+        { number: 97, type: "mc", question: "Translate ‘Cheap’ into Russian.", correct: "дешёвый", options: ["дешёвый", "дорогой", "бесплатный", "редкий"] },
+        { number: 98, type: "mc", question: "Translate ‘Expensive’ into Russian.", correct: "дорогой", options: ["дорогой", "дешёвый", "бесплатный", "недорогой"] },
+        { number: 99, type: "mc", question: "Translate ‘Rich’ into Russian.", correct: "богатый", options: ["богатый", "бедный", "обычный", "могучий"] },
+        { number: 100, type: "ft", question: "Write the Russian word for ‘Poor’.", correct: "бедный" }
+      ];
+
+      const container = document.getElementById("exercises");
+      exercises.forEach(function(ex) {
+        // Create the container div for this exercise.
+        const exDiv = document.createElement("div");
+        exDiv.className = "exercise";
+
+        // Create the question paragraph.
+        const qP = document.createElement("p");
+        qP.innerHTML = `<strong>Exercise ${ex.number}:</strong> ${ex.question}`;
+        exDiv.appendChild(qP);
+
+        // For multiple–choice exercises, show option buttons.
+        if (ex.type === "mc") {
+          const optionsDiv = document.createElement("div");
+          optionsDiv.className = "options";
+          ex.options.forEach(function(opt) {
+            const optBtn = document.createElement("button");
+            optBtn.textContent = opt;
+            optBtn.onclick = function() {
+              document.getElementById("input" + ex.number).value = opt;
+            };
+            optionsDiv.appendChild(optBtn);
+          });
+          exDiv.appendChild(optionsDiv);
+        }
+        // Create the text input field.
+        const inputField = document.createElement("input");
+        inputField.type = "text";
+        inputField.placeholder = "Your answer here";
+        inputField.id = "input" + ex.number;
+        exDiv.appendChild(inputField);
+
+        // Create the Check Answer button.
+        const checkBtn = document.createElement("button");
+        checkBtn.textContent = "Check Answer";
+        checkBtn.onclick = function() {
+          checkAnswer("input" + ex.number, ex.correct, "feedback" + ex.number);
+        };
+        exDiv.appendChild(checkBtn);
+
+        // Create the Show Answer button.
+        const showBtn = document.createElement("button");
+        showBtn.textContent = "Show Answer";
+        showBtn.onclick = function() {
+          revealAnswer("input" + ex.number, ex.correct, "feedback" + ex.number);
+        };
+        exDiv.appendChild(showBtn);
+
+        // Create the feedback span.
+        const feedbackSpan = document.createElement("span");
+        feedbackSpan.id = "feedback" + ex.number;
+        feedbackSpan.className = "feedback";
+        exDiv.appendChild(feedbackSpan);
+
+        // Append this exercise div to the container.
+        container.appendChild(exDiv);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Russian Language Exercises: Basic Vocabulary for Everyday Use (A1 Level)</h1>
+  <div id="exercises"></div>
+</body>
+</html>
